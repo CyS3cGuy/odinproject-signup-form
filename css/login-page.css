@@ -3,6 +3,11 @@
     background-image: url("../images/backgrounds/background3.jpg");
 }
 
+#nav-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 #hero {
     background-color: var(--background-100);
 
@@ -10,6 +15,7 @@
         font-size: var(--heading-font-size);
         font-weight: var(--heading-font-weight);
         color: var(--primary-800);
+        text-align: center;
     }
 }
 

@@ -103,6 +103,7 @@ body {
         box-shadow: none;
         outline: none;
         transition-duration: box-shadow 300ms;
+        width: 100%;
     }
 
     & .input-text-label {

@@ -1,0 +1,195 @@
+:root {
+    & body {
+        background-color: var(--background);
+        color: var(--text);
+    }
+}
+
+body {
+    font-size: var(--standard-font-size);
+    font-weight: var(--standard-font-weight);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-block {
+    margin: var(--standard-section-mobile-margin);
+    padding: var(--standard-section-mobile-padding);
+    border-radius: var(--standard-border-radius);
+}
+
+.aria-required {
+    color: var(--alert-red);
+}
+
+.section-row {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.columnar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-elements-gap);
+}
+
+.link {
+    background-position-y: -0%;
+    background-image: linear-gradient(180deg, transparent 50%, var(--accent) 50%) !important;
+    transition: all 0.1s ease;
+    background-size: auto 190%;
+    padding: 3px 0;
+    font-style: italic;
+}
+
+.link:hover {
+    background-position-y: 5%;
+}
+
+.link:visited {
+    color: var(--text-400);
+}
+
+.primary-button {
+    padding: 0.5rem 2rem;
+    background-color: var(--primary);
+    color: var(--text-50);
+    border-radius: var(--standard-border-radius);
+    transition: all ease 200ms;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    transform: translate(0,-3px);
+    background-color: var(--primary-600);
+    box-shadow: 0 0 22px -12px var(--primary-300);
+}
+
+.primary-button:active {
+    transform: translate(0,-3px);
+    background-color: var(--primary-300);
+    color: var(--text-800);
+    box-shadow: 0 0 22px -12px var(--primary-300);
+}
+
+.social-button {
+    padding: 0.5rem 2rem;
+    background-color: var(--secondary);
+    color: var(--text-50);
+    border-radius: var(--standard-border-radius);
+    transition: all ease 200ms;
+    border: none;
+    cursor: pointer;
+}
+
+.long-straight {
+    border-top: 1px solid var(--secondary);
+    width: 100%;
+    height: var(--standard-font-size);
+    display: inline-block;
+}
+
+.form-row {
+    margin: var(--standard-section-mobile-margin);
+
+    & input[type="text"],
+    & input[type="password"] {
+        background: var(--secondary-800);
+        border: 1px solid var(--accent-500);
+        border-radius: var(--standard-border-radius);
+        color: var(--text-50);
+        padding: var(--standard-input-text-padding);
+        box-shadow: none;
+        outline: none;
+        transition-duration: box-shadow 300ms;
+    }
+
+    & .input-text-label {
+        display: block;
+        margin-bottom: 0.6rem;
+    }
+
+    & input[type="text"]:hover,
+    & input[type="password"]:hover {
+        box-shadow: inset 0 0 3px var(--accent-500);
+    }
+
+    & input[type="text"]:focus,
+    & input[type="password"]:focus {
+        
+        border: 2px solid var(--accent-300);
+        box-shadow: 0 0 3px var(--accent-500);
+    }
+}
+
+.form-row:last-child {
+    margin: 0;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--background);
+    height: var(--bg-mobile-height);
+
+    display: flex;
+    align-items: center;
+
+    & .tag {
+        background-color: var(--bg-overlay);
+        width: 100%;
+        height: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--standard-elements-gap);
+
+        & .brand-title {
+            font-size: var(--bg-title-size);
+            font-weight: var(--bg-title-font-weight);
+            color: var(--bg-logo-title-color)
+        }
+
+        & .brand-img {
+            width: var(--bg-title-size);
+        }
+    }
+}
+
+.body-content {
+    margin: 1.6rem auto;
+    width: 60%;
+
+    & header {
+        display: flex;
+        justify-content: space-between;
+
+        & .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--standard-elements-gap);
+
+            & .img-container {
+                position: relative;
+                width: var(--heading-font-size);
+                height: var(--heading-font-size);
+
+                & img {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+            }
+
+            & .brand-title {
+                font-size: var(--heading-font-size);
+                font-weight: var(--heading-font-weight);
+                color: var(--logo-title-color)
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+/** Reset **/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    display: inline-block;
+}
+
+:root {
+    font-size: 62.5%;
+}

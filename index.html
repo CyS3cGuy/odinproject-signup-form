@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/modern-normalize.css">
+    <link rel="stylesheet" href="./css/custom-reset.css">
+    <link rel="stylesheet" href="./css/var.css">
+    <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/login-page.css">
+    <title>Login Page</title> 
+</head>
+
+<body>
+    <div id="login-background" class="background">
+        <div class="tag">
+            <img class="brand-img" src="./images/logos/logo-white.png" alt="Black Logo" >
+            <div class="brand-title">FakeIT</div>
+        </div>
+    </div>
+    <div id="login-ui" class="body-content">
+        <header id="nav-header" class="section-block">
+            <div class="logo">
+                <div class="img-container">
+                    <img src="./images/logos/logo-black.png" class="black-logo" alt="Black Logo">
+                    <img src="./images/logos/logo-white.png" class="white-logo" alt="White Logo">
+                </div>
+                
+                <div class="brand-title">FakeIT</div>
+            </div>
+            
+            <input type="checkbox" name="darkOrLight" id="dark-light-toggle">
+        </header>
+
+        <section id="hero" class="section-block">
+            <h1>Welcome Back!</h1>
+            <p>Enter for unlimited creation of your fake self.</p>
+        </section>
+        
+        <form id="login-form" action="" method="get" class="section-block">
+            <div class="form-row">
+                <label for="username" class="input-text-label">Username<span class="aria-required">*</span></label>
+                <input type="text" name="username" id="username" required>
+            </div>
+
+            <div class="form-row">
+                <label for="pwd" class="input-text-label">Password<span class="aria-required">*</span></label>
+                <input type="password" name="pwd" id="pwd" required>
+            </div>
+
+            <div class="form-row columnar">
+                <div class="left-col">
+                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                
+                <div class="right-col">
+                    <a href="#" class="link">Forgot your password?</a>
+                </div>
+            </div>
+
+            <div class="form-row button-submit">
+                <button type="submit" class="primary-button">Login</button>
+            </div>
+        </form>
+
+        <section id="alternative-login" class="section-block">
+            <div class="section-row">
+                <span class="long-straight"></span> 
+                <span id="alternative-login-text">Or login with</span>
+            </div>
+
+            <div id="social-login" class="section-row">
+                <button type="button" id="login-google" class="social-button">
+                    <img src="./images/social/google-logo.svg" alt="Google">
+                </button>
+                <button type="button" id="login-facebook" class="social-button">
+                    <img src="./images/social/facebook-logo.svg" alt="Google">
+                </button>
+                <button type="button" id="login-linkedin" class="social-button">
+                    <img src="./images/social/linkedin-logo.svg" alt="Google">
+                </button>
+            </div>
+        </section>
+
+        <section id="sign-up" class="section-block">
+            <p>Don't have an account? <a href="./signup.html" class="link">Register here</a></p>
+        </section>
+    </div>
+
+    <script>
+        const root = document.documentElement;
+        const brightnessToggle = document.querySelector("#dark-light-toggle");
+        const headerLogoBlack = document.querySelector("#login-ui .black-logo");
+        const headerLogoWhite = document.querySelector("#login-ui .white-logo");
+
+        brightnessToggle.addEventListener("input", (event) => {
+            let isLight = brightnessToggle.checked;
+            if (isLight) {
+                root.classList.add("light");
+                root.classList.remove("dark");
+
+                headerLogoBlack.style.visibility = "visible";
+                headerLogoWhite.style.visibility = "hidden";
+            } else {
+                root.classList.add("dark");
+                root.classList.remove("light");
+
+                headerLogoBlack.style.visibility = "hidden";
+                headerLogoWhite.style.visibility = "visible";
+            }
+        })
+    </script>
+</body>
+
+</html>

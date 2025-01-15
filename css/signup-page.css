@@ -23,14 +23,14 @@
     background-color: var(--background-900);
     color: var(--text-50);
 
-    & input[type="password"]:focus,
-    & input[type="password"]:user-invalid {
+    & #pwd:focus,
+    & #pwd:user-invalid {
         ~ .password-req {
             display: flex;
         }
     }
 
-    & input[type="password"]:valid {
+    & #pwd:valid {
         ~ .password-req {
             display: none;
         }

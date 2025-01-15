@@ -76,7 +76,7 @@
             <div class="form-row columnar">
                 <div class="left-col">
                     <label for="pwd" class="input-text-label">Password<span class="aria-required">*</span></label>
-                    <input type="password" name="pwd" id="pwd"
+                    <input type="password" name="pwd" id="pwd" minlength="8" maxlength="32"
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s])\S{8,32}$" required>
                     <span class="invalid symbol">&#x2716;</span>
                     <span class="valid symbol">&#x2714;</span>
@@ -147,6 +147,7 @@
     </div>
 
     <script src="./js/toggle-brightness.js"></script>
+    <script src="./js/validate.js"></script> 
 </body>
 
 </html>

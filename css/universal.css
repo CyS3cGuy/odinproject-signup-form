@@ -18,6 +18,8 @@ body {
     border-radius: var(--standard-border-radius);
 }
 
+
+
 .aria-required {
     color: var(--alert-red);
 }
@@ -31,6 +33,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--standard-elements-gap);
+
+    & .right-col {
+        text-align: right;
+    }
 }
 
 .link {
@@ -134,6 +140,7 @@ body {
     background-position: center;
     background-color: var(--background);
     height: var(--bg-mobile-height);
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -141,7 +148,7 @@ body {
     & .tag {
         background-color: var(--bg-overlay);
         width: 100%;
-        height: 40%;
+        padding: 1.6rem 0;
 
         display: flex;
         justify-content: center;
@@ -192,5 +199,33 @@ body {
                 color: var(--logo-title-color)
             }
         }
+    }
+}
+
+@media only screen and (min-width: 70rem) {
+    body {
+        flex-direction: row;
+    }
+
+    .background {
+        order: 2;
+        height: var(--bg-desktop-height);
+        width: 50%;
+    }
+
+    .body-content {
+        margin: 0;
+        padding: 3rem;
+    }
+
+    .section-block {
+        width: min(70%, 80rem);   
+        margin: var(--standard-section-desktop-margin);
+        padding: var(--standard-section-desktop-padding); 
+    }
+
+    .columnar {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

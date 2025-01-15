@@ -11,10 +11,13 @@
     /** Dimension **/
     --standard-elements-gap: 8px;
     --bg-mobile-height: 30vh;
+    --bg-desktop-height: 100vh;
 
     /** Spacer **/
     --standard-section-mobile-padding: 1.6rem;
     --standard-section-mobile-margin: 0 0 1.4rem 0;
+    --standard-section-desktop-margin: 2rem auto; 
+    --standard-section-desktop-padding: 3rem;
     --standard-border-radius: 8px;
     --standard-input-text-padding: 0.8rem;
 
@@ -25,6 +28,7 @@
     --standard-font-size: clamp(1.6rem, calc(0.5vw + 1.3rem), 2.4rem);
     --heading-font-size: clamp(2.1rem, calc(2vw + 1.6rem), 3.5rem);
     --bg-title-size: clamp(3rem, calc(3.5vw + 2.5rem), 7rem);
+    --social-img-button-size: clamp(3rem, calc(3.5vw + 2.5rem), 7rem);
 
     --standard-font-weight: normal;
     --heading-font-weight: bold;

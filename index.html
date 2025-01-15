@@ -38,7 +38,7 @@
             <p>Enter for unlimited creation of your fake self.</p>
         </section>
         
-        <form id="login-form" action="" method="get" class="section-block">
+        <form id="login-form" action="./login-successful.html" method="get" class="section-block">
             <div class="form-row">
                 <label for="username" class="input-text-label">Username<span class="aria-required">*</span></label>
                 <input type="text" name="username" id="username" required>
@@ -56,7 +56,7 @@
                 </div>
                 
                 <div class="right-col">
-                    <a href="#" class="link">Forgot your password?</a>
+                    <a href="./forgot-password.html" class="link">Forgot your password?</a>
                 </div>
             </div>
 
@@ -71,17 +71,17 @@
                 <span id="alternative-login-text">Or login with</span>
             </div>
 
-            <div id="social-login" class="section-row">
-                <button type="button" id="login-google" class="social-button">
+            <form method="get" action="./oauth2.html" id="social-login" class="section-row">
+                <button type="submit" id="login-google" class="social-button">
                     <img src="./images/social/google-logo.svg" alt="Google">
                 </button>
-                <button type="button" id="login-facebook" class="social-button">
+                <button type="submit" id="login-facebook" class="social-button">
                     <img src="./images/social/facebook-logo.svg" alt="Google">
                 </button>
-                <button type="button" id="login-linkedin" class="social-button">
+                <button type="submit" id="login-linkedin" class="social-button">
                     <img src="./images/social/linkedin-logo.svg" alt="Google">
                 </button>
-            </div>
+            </form>
         </section>
 
         <section id="sign-up" class="section-block">
@@ -89,29 +89,7 @@
         </section>
     </div>
 
-    <script>
-        const root = document.documentElement;
-        const brightnessToggle = document.querySelector("#dark-light-toggle");
-        const headerLogoBlack = document.querySelector("#login-ui .black-logo");
-        const headerLogoWhite = document.querySelector("#login-ui .white-logo");
-
-        brightnessToggle.addEventListener("input", (event) => {
-            let isLight = brightnessToggle.checked;
-            if (isLight) {
-                root.classList.add("light");
-                root.classList.remove("dark");
-
-                headerLogoBlack.style.visibility = "visible";
-                headerLogoWhite.style.visibility = "hidden";
-            } else {
-                root.classList.add("dark");
-                root.classList.remove("light");
-
-                headerLogoBlack.style.visibility = "hidden";
-                headerLogoWhite.style.visibility = "visible";
-            }
-        })
-    </script>
+    <script src="./js/toggle-brightness.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,6 @@
 #login-form {
     background-color: var(--background-900);
     color: var(--text-50);
-
 }
 
 #alternative-login {
@@ -53,7 +52,7 @@
             padding: 0.4rem 0.8rem;
 
             & img {
-                width: 3.8rem;
+                width: var(--social-img-button-size);
             }
         }
 
@@ -73,5 +72,11 @@
 #sign-up {
     p {
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: 70rem) {
+    #hero {
+        text-align: left;
     }
 }

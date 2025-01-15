@@ -10,12 +10,12 @@
 
 #hero {
     background-color: var(--background-100);
+    text-align: center;
 
     h1 {
         font-size: var(--heading-font-size);
         font-weight: var(--heading-font-weight);
         color: var(--primary-800);
-        text-align: center;
     }
 }
 

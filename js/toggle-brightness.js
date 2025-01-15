@@ -1,7 +1,7 @@
 const root = document.documentElement;
 const brightnessToggle = document.querySelector("#dark-light-toggle");
-const headerLogoBlack = document.querySelector("#login-ui .black-logo");
-const headerLogoWhite = document.querySelector("#login-ui .white-logo");
+const headerLogoBlack = document.querySelector(".body-content .black-logo");
+const headerLogoWhite = document.querySelector(".body-content .white-logo");
 
 brightnessToggle.addEventListener("input", (event) => {
     let isDark = brightnessToggle.checked;

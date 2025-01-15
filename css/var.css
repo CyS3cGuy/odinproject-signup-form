@@ -7,13 +7,16 @@
     --bg-overlay: rgba(29, 29, 29, 0.4);
     --bg-logo-title-color: white;
     --alert-red: rgb(255, 69, 69);
+    --emerald-green: rgb(4, 121, 4);
+    --alert-red-lighter: rgb(255, 69, 69, 0.3);
+    --emerald-green-lighter: rgb(4, 121, 4, 0.3);
 
     /** Dimension **/
     --standard-elements-gap: 8px;
     --bg-mobile-height: 30vh;
     --bg-desktop-height: 100vh;
 
-    /** Spacer **/
+    /** Spacer **/  
     --standard-section-mobile-padding: 1.6rem;
     --standard-section-mobile-margin: 0 0 1.4rem 0;
     --standard-section-desktop-margin: 2rem auto; 

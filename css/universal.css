@@ -20,8 +20,17 @@ body {
 
 
 
-.aria-required {
+.aria-required,
+.invalid {
     color: var(--alert-red);
+}
+
+.valid {
+    color: var(--emerald-green)
+}
+
+.symbol {
+    font-size: calc(var(--standard-font-size) + 1rem);
 }
 
 .section-row {
@@ -33,10 +42,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--standard-elements-gap);
-
-    & .right-col {
-        text-align: right;
-    }
 }
 
 .link {
@@ -97,10 +102,13 @@ body {
 }
 
 .form-row {
+    position: relative;
     margin: var(--standard-section-mobile-margin);
 
     & input[type="text"],
-    & input[type="password"] {
+    & input[type="password"],
+    & input[type="email"],
+    & input[type="tel"] {
         background: var(--secondary-800);
         border: 1px solid var(--accent-500);
         border-radius: var(--standard-border-radius);
@@ -108,8 +116,7 @@ body {
         padding: var(--standard-input-text-padding);
         box-shadow: none;
         outline: none;
-        transition-duration: box-shadow 300ms;
-        width: 100%;
+        width: 90%;
     }
 
     & .input-text-label {
@@ -118,15 +125,51 @@ body {
     }
 
     & input[type="text"]:hover,
-    & input[type="password"]:hover {
+    & input[type="password"]:hover,
+    & input[type="email"]:hover,
+    & input[type="tel"]:hover {
         box-shadow: inset 0 0 3px var(--accent-500);
     }
 
     & input[type="text"]:focus,
-    & input[type="password"]:focus {
+    & input[type="password"]:focus,
+    & input[type="email"]:focus,
+    & input[type="tel"]:focus {
         
         border: 2px solid var(--accent-300);
         box-shadow: 0 0 3px var(--accent-500);
+    }
+
+    & input[type="text"]:invalid,
+    & input[type="password"]:invalid,
+    & input[type="email"]:invalid,
+    & input[type="tel"]:invalid {
+
+        ~ .invalid {
+            visibility: visible;
+        }
+
+        ~ .valid {
+            visibility: hidden;
+        }
+    }
+
+    & input[type="text"]:valid,
+    & input[type="password"]:valid,
+    & input[type="email"]:valid,
+    & input[type="tel"]:valid {
+
+        ~ .invalid {
+            visibility: hidden;
+        }
+
+        ~ .valid {
+            visibility: visible;
+        }
+    }
+
+    .symbol {
+        position: absolute;
     }
 }
 
@@ -139,7 +182,7 @@ body {
     background-size: cover;
     background-position: center;
     background-color: var(--background);
-    height: var(--bg-mobile-height);
+    min-height: var(--bg-mobile-height);
     width: 100%;
 
     display: flex;
@@ -209,7 +252,7 @@ body {
 
     .background {
         order: 2;
-        height: var(--bg-desktop-height);
+        min-height: var(--bg-desktop-height); 
         width: 50%;
     }
 
@@ -227,5 +270,9 @@ body {
     .columnar {
         flex-direction: row;
         justify-content: space-between;
+
+        & .right-align {
+            text-align: right;
+        }
     }
 }

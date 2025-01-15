@@ -1,13 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/modern-normalize.css">
+    <link rel="stylesheet" href="./css/custom-reset.css">
+    <link rel="stylesheet" href="./css/var.css">
+    <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/signup-page.css">
     <title>Sign Up Page</title>
 </head>
+
 <body>
-    <form action="./index.html" method="get">
-        <button>Submit</button>
-    </form>
+    <div id="signup-background" class="background">
+        <div class="tag">
+            <img class="brand-img" src="./images/logos/logo-white.png" alt="Black Logo">
+            <div class="brand-title">FakeIT</div>
+        </div>
+    </div>
+    <div id="login-ui" class="body-content">
+        <header id="nav-header" class="section-block">
+            <div class="logo">
+                <div class="img-container">
+                    <img src="./images/logos/logo-black.png" class="black-logo" alt="Black Logo">
+                    <img src="./images/logos/logo-white.png" class="white-logo" alt="White Logo">
+                </div>
+
+                <div class="brand-title">FakeIT</div>
+            </div>
+
+            <input type="checkbox" name="darkOrLight" id="dark-light-toggle">
+        </header>
+
+        <section id="hero" class="section-block">
+            <h1>Create A New Account</h1>
+            <p>Start your fake web journey with a BANG!</p>
+        </section>
+
+        <form id="signup-form" action="./index.html" method="get" class="section-block">
+            <div class="form-row columnar">
+                <div class="left-col">
+                    <label for="username" class="input-text-label">Username<span class="aria-required">*</span></label>
+                    <input type="text" name="username" id="username" required placeholder="johndoe0123" minlength="1"
+                        maxlength="32">
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                </div>
+
+                <div class="right-col">
+                    <label for="full-name" class="input-text-label">Full Name</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="John Doe">
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                </div>
+            </div>
+
+            <div class="form-row columnar">
+                <div class="left-col">
+                    <label for="email" class="input-text-label">Email<span class="aria-required">*</span></label>
+                    <input type="email" name="email" id="email" required placeholder="john@example.com">
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                </div>
+
+                <div class="right-col">
+                    <label for="phone" class="input-text-label">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" pattern="^0[0-9]{1,2}-?[0-9]{7,8}$"
+                        placeholder="016-12345678">
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                </div>
+            </div>
+
+            <div class="form-row columnar">
+                <div class="left-col">
+                    <label for="pwd" class="input-text-label">Password<span class="aria-required">*</span></label>
+                    <input type="password" name="pwd" id="pwd"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s])\S{8,32}$" required>
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                    <div class="password-req">
+                        <div class="symbol-box">
+                            <span class="invalid symbol-small">&#x2716;</span>
+                            <span class="valid symbol-small">&#x2714;</span>
+                        </div>
+                        <div class="text">At least one LOWERCASE letter</div>
+                    </div>
+
+                    <div class="password-req">
+                        <div class="symbol-box">
+                            <span class="invalid symbol-small">&#x2716;</span>
+                            <span class="valid symbol-small">&#x2714;</span>
+                        </div>
+                        <div class="text">At least one UPPERCASE letter</div>
+                    </div>
+
+                    <div class="password-req">
+                        <div class="symbol-box">
+                            <span class="invalid symbol-small">&#x2716;</span>
+                            <span class="valid symbol-small">&#x2714;</span>
+                        </div>
+                        <div class="text">At least one NUMBER</div>
+                    </div>
+
+                    <div class="password-req">
+                        <div class="symbol-box">
+                            <span class="invalid symbol-small">&#x2716;</span>
+                            <span class="valid symbol-small">&#x2714;</span>
+                        </div>
+                        <div class="text">At least one SYMBOL</div>
+                    </div>
+
+                    <div class="password-req">
+                        <div class="symbol-box">
+                            <span class="invalid symbol-small">&#x2716;</span>
+                            <span class="valid symbol-small">&#x2714;</span>
+                        </div>
+                        <div class="text">8 to 32 characters</div>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <label for="confirm-pwd" class="input-text-label">Confirm Password<span
+                            class="aria-required">*</span></label>
+                    <input type="password" name="confirm-pwd" id="confirm-pwd" required>
+                    <span class="invalid symbol">&#x2716;</span>
+                    <span class="valid symbol">&#x2714;</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <input type="checkbox" name="accept-tnc" id="accept-tnc" required>
+                <label for="accept-tnc">I have read through and accepted the <a href="#" target="_blank"
+                        rel="noopener noreferrer" class="link">Terms & Conditions</a> and <a href="#" target="_blank"
+                        rel="noopener noreferrer" class="link">Privacy Notice</a>.</label>
+            </div>
+            <div class="form-row button-submit">
+                <button type="submit" class="primary-button">Create An Account</button>
+            </div>
+        </form>
+
+        <section id="login" class="section-block">
+            <p>Already have an account? <a href="./index.html" class="link">Login here</a></p>
+        </section>
+    </div>
+
+    <script src="./js/toggle-brightness.js"></script>
 </body>
+
 </html>

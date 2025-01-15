@@ -1,0 +1,79 @@
+/** Page Specific CSS **/
+#signup-background {
+    background-image: url("../images/backgrounds/background2.jpg");
+}
+
+#nav-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#hero {
+    background-color: var(--background-100);
+    text-align: center;
+
+    h1 {
+        font-size: var(--heading-font-size);
+        font-weight: var(--heading-font-weight);
+        color: var(--primary-800);
+    }
+}
+
+#signup-form {
+    background-color: var(--background-900);
+    color: var(--text-50);
+
+    & input[type="password"]:focus,
+    & input[type="password"]:user-invalid {
+        ~ .password-req {
+            display: flex;
+        }
+    }
+
+    & input[type="password"]:valid {
+        ~ .password-req {
+            display: none;
+        }
+    }
+} 
+
+#login {
+    p {
+        text-align: center;
+    }
+}
+
+.password-req {
+    font-size: calc(var(--standard-font-size) - 0.7rem);
+    width: 85%;
+    margin: 0.2rem 0;
+    padding: 0.2rem;
+    border-radius: var(--standard-border-radius);
+    background-color: var(--alert-red-lighter);
+    display: none;
+
+    .symbol-box {
+        position: relative;
+        width: 1.2rem;
+
+        .symbol-small {
+            position: absolute; 
+        }
+
+        .valid.symbol-small {
+            visibility: hidden;
+        }
+
+        
+    }
+
+    .text {
+        padding-left: 0.4rem; 
+    }
+}
+
+@media only screen and (min-width: 70rem) {
+    #hero {
+        text-align: left;
+    }
+}

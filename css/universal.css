@@ -234,6 +234,10 @@ body {
                     transform: translateY(-50%);
                 }
 
+                .white-logo {
+                    visibility: hidden;
+                }
+
             }
 
             & .brand-title {

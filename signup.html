@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/custom-reset.css">
     <link rel="stylesheet" href="./css/var.css">
     <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/brightness-toggle.css">
     <link rel="stylesheet" href="./css/signup-page.css">
     <title>Sign Up Page</title>
 </head>
@@ -30,7 +31,21 @@
                 <div class="brand-title">FakeIT</div>
             </div>
 
-            <input type="checkbox" name="darkOrLight" id="dark-light-toggle">
+            <div class="theme__toggle-wrap">
+                <input id="dark-light-toggle" class="theme__toggle" type="checkbox" role="switch" name="darkOrLight">
+                
+                <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                </span>
+            </div>
         </header>
 
         <section id="hero" class="section-block">

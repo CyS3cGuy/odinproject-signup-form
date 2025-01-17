@@ -257,12 +257,13 @@ body {
     .background {
         order: 2;
         min-height: var(--bg-desktop-height); 
-        width: 50%;
+        width:  clamp(30rem, 40%, 70rem);
     }
 
     .body-content {
         margin: 0;
-        width: clamp(50rem, 70%, 100rem);
+        /* width: clamp(50rem, 90%, 100rem); */
+        flex: 1;
     }
 
     .section-block {
